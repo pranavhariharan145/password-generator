@@ -44,9 +44,46 @@ function password_generator(plength, uppercase, lowercase, numbers, special)
 
 let plength = 6
 let uppercase = false
-let lowercase = true
+let lowercase = false
 let numbers = false
-let special = true
-let ans = password_generator(plength, uppercase, lowercase, numbers, special)
-console.log(ans)
+let special = false
+let text = document.getElementById("textbox")
+let ucase = document.getElementById("upper")
+let lcase = document.getElementById("lower")
+let ncase = document.getElementById("number")
+let scase = document.getElementById("special")
 
+document.getElementById("submit").onclick = function()
+{
+    if(ucase.checked)
+    {
+        uppercase = true
+    }
+    else{
+        uppercase = false
+    }
+    if(lcase.checked)
+    {
+        lowercase = true
+    }
+    else{
+        lowercase = false
+    }
+    if(ncase.checked)
+    {
+        numbers = true
+    }
+    else{
+        numbers = false
+    }
+    if(scase.checked)
+    {
+        special = true
+    }
+    else{
+        special = false
+    }
+    let ans = password_generator(plength, uppercase, lowercase, numbers, special)
+    text.value = ans
+
+}
