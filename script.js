@@ -28,21 +28,25 @@ function password_generator(plength, uppercase, lowercase, numbers, special)
     {
         password = "Enter value more than 0"
     }
+    if(allowed.length === 0)
+    {
+        password = "Choose any 1 option below"
+    }
     for(let i = 0; i < plength; i++)
     {
         let index = Math.floor(Math.random() * allowed.length)
         password = password + allowed[index]
     }
 
-    
-
     return password
+
 }
 
-let plength = 12
-let uppercase = true
-let lowercase = false
+let plength = 6
+let uppercase = false
+let lowercase = true
 let numbers = false
-let special = false
+let special = true
 let ans = password_generator(plength, uppercase, lowercase, numbers, special)
 console.log(ans)
+
