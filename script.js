@@ -42,7 +42,7 @@ function password_generator(plength, uppercase, lowercase, numbers, special)
 
 }
 
-let plength = 6
+let plength = 12
 let uppercase = false
 let lowercase = false
 let numbers = false
